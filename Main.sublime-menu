@@ -1,0 +1,17 @@
+[
+  {
+    "id" : "broken_window_menu",
+    "caption": "Broken window",
+    "children":
+    [
+      {
+        "caption" : "Ejecutar en proyecto",
+        "command" : "scan_all"
+      },
+      {
+        "caption" : "Ejecutar en template",
+        "command" : "scan_file"
+      }
+    ]
+  }
+]

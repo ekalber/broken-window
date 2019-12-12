@@ -1,0 +1,10 @@
+[
+	{
+		"keys": ["super+shift+a"],
+		"command": "scan_all"
+	},
+	{
+		"keys": ["super+shift+f"],
+		"command": "scan_file"
+	}
+]
