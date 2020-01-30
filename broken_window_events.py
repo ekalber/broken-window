@@ -7,7 +7,7 @@ class BrokenWindowEvents(sublime_plugin.EventListener):
   def on_modified_async(self, view):
     # If there is any change in the buffer without saving
     if view.is_dirty() == True:
-      broken_window.scan_view(view)    
+      broken_window.scan_view(view)
 
   # Called when a view gains input focus
   def on_activated_async(self, view):

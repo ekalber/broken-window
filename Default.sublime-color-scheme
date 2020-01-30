@@ -1,0 +1,11 @@
+{
+    "rules":
+    [
+        {
+            "name": "Errores en BrokenWindow",
+            "scope": "brokenwindow.error",
+            "foreground": "var(red)",
+            "highlight": "hsl(1000, 0%, 15%)"
+        }
+    ]
+}

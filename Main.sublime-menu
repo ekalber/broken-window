@@ -5,10 +5,12 @@
     "children":
     [
       {
+        "id": "1",
         "caption" : "Ejecutar en proyecto",
         "command" : "scan_all"
       },
       {
+        "id": "2",
         "caption" : "Ejecutar en template",
         "command" : "scan_file"
       }

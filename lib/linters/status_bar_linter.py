@@ -1,4 +1,5 @@
 import sublime 
+import sublime_plugin
 
-def alert(view, code):
-  self.status_message(code)
+def alert(view, line, message):
+  view.window().status_message(message + " (Line: " + str(line) + ")")
