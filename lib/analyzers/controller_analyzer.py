@@ -13,5 +13,5 @@ def scan(view):
       
       warn = forgery_setting_checker.check(line)
 
-      if warn:
-        base_linter.alert(view, line_number, line, warn)
+      #if warn:
+      #  base_linter.alert(view, line_number, line, warn)

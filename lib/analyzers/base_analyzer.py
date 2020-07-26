@@ -23,6 +23,7 @@ def scan(view):
   if view.window().extract_variables()['file_name'] == "Gemfile":
     gem_analyzer.scan(view)
   else:
+    sublime.error_message("va por los otros...")
     file_path_name = file_path(view)
     if file_path_name == "controllers":
       controller_analyzer.scan(view)

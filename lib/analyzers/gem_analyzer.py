@@ -10,6 +10,8 @@ def scan(view):
   # Lines of view to regions
   regions = view.lines(main_region)
   line_number = 0
+  error = False
+
   # Iterate regions
   for region in regions:
     line_number += 1
@@ -18,7 +20,8 @@ def scan(view):
     if not region.empty():
       # Se eliminan las alertas de error anteriores
       view.erase_regions("error"+str(line_number))
-
+      #
+      
       line = view.substr(region)
       
       result = re.findall("[\"-\'](.*?)[\"-\']", line)
@@ -35,7 +38,14 @@ def scan(view):
           warn = json_encoding_checker.check(name, version)
 
           if warn:
+            error = True
             base_linter.alert(view, line_number, line, warn)
+
+  if error:
+    base_linter.side_bar_alert()
+  else:
+    base_linter.side_bar_clear()
+
 
 def scan_gemfile(name, version):
   # Por cada línea llamar a los checks que se crea conveniente
